@@ -1,8 +1,26 @@
-const SearchBar = () => {
+import { useState } from "react";
+
+const SearchBar = ({termHandler}) => {
+
+    const [term, setTerm] = useState('')
+    const changeHandler = (e) => {
+        setTerm(e.target.value)
+    }
+
+    const submitHandler = (e) => {
+        e.preventDefault();
+        termHandler(term)
+    }
+
     return(
-        <div>
-            Search Bar
-        </div>
+        <form onSubmit={submitHandler}>
+            <label>Enter a search term</label>
+            <input 
+            type="text"
+            value={term}
+            onChange={changeHandler}
+            />
+        </form>
     )
 }
 
