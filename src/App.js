@@ -14,7 +14,7 @@ const App = () => {
         setImages(results)
     }
     return(
-        <div>
+        <div className="flex flex-col justify-center items-center w-[90%] h-[90vh] mx-[5%] mt-5 shadow-xl bg-gray-300 border border-gray-300 rounded-md ">
             <SearchBar termHandler = {termHandler} />
             <ImageList images = {images}/>
         </div>
