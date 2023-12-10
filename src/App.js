@@ -9,8 +9,8 @@ const App = () => {
 
     const [images, setImages] = useState([])
 
-    const termHandler = (term) => {
-        const results = fetchImages(term)
+    const termHandler = async (term) => {
+        const results = await fetchImages(term)
         setImages(results)
     }
     return(

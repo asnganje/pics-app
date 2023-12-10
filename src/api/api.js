@@ -13,7 +13,7 @@ export const fetchImages = async (term) => {
                     }
                 })
                 console.log(response.data.results)
-                return response;
+                return response.data.results;
             }
             catch(error) {
                 console.log(error.message)

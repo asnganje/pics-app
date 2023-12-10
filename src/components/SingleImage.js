@@ -1,8 +1,8 @@
-const SingleImage = () => {
+const SingleImage = ({img}) => {
     return(
-        <div>
-            Image
-        </div>
+            <div >
+                <img src={img.urls.small} alt={img.slug}/>
+            </div>
     )
 }
 
